@@ -59,23 +59,23 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "@vue/runtime-core";
-import { useRouter } from "vue-router";
+import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
-  name: "LoginPage",
+  name: 'LoginPage',
 
   setup() {
     const router = useRouter();
 
     const login = () => {
-      router.push({ name: "Dashboard" });
+      router.push({ name: 'Dashboard' });
     };
     return {
-      selection: ref(["yellow", "black"]),
-      login,
+      selection: ref(['yellow', 'black']),
+      login
     };
-  },
+  }
 });
 </script>
 
@@ -87,7 +87,7 @@ export default defineComponent({
 
   .content {
     .title {
-      font-family: "Open Sans Condensed", sans-serif;
+      font-family: 'Open Sans Condensed', sans-serif;
       font-size: 40px;
       color: #ddd;
       text-shadow: 3px 3px 10px #000;

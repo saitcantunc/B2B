@@ -1,63 +1,63 @@
 const routes = [
   {
-    path: "/",
-    component: () => import("layouts/LoginLayout.vue"),
+    path: '/',
+    component: () => import('layouts/LoginLayout.vue'),
     children: [
       {
-        name: "Login",
-        path: "login",
-        component: () => import("pages/Login/LoginPage.vue"),
-      },
-    ],
+        name: 'Login',
+        path: 'login',
+        component: () => import('pages/Login/LoginPage.vue')
+      }
+    ]
   },
 
   {
-    path: "/dashboard",
-    component: () => import("src/layouts/MainLayout.vue"),
+    path: '/dashboard',
+    component: () => import('src/layouts/MainLayout.vue'),
     children: [
       {
-        name: "Dashboard",
-        path: "",
-        component: () => import("pages/Main/DashboardPage.vue"),
+        name: 'Dashboard',
+        path: '',
+        component: () => import('pages/Main/DashboardPage.vue'),
         meta: {
-          title: "Dashboard",
-        },
-      },
-    ],
+          title: 'Dashboard'
+        }
+      }
+    ]
   },
 
   {
-    path: "/users",
-    component: () => import("layouts/MainLayout.vue"),
+    path: '/users',
+    component: () => import('layouts/MainLayout.vue'),
     children: [
       {
-        name: "Users",
-        path: "",
-        component: () => import("pages/Main/UsersPage.vue"),
+        name: 'Users',
+        path: '',
+        component: () => import('pages/Main/UsersPage.vue'),
         meta: {
-          title: "Users",
-        },
+          title: 'Users'
+        }
       },
       {
-        name: "User-Form",
-        path: "user-form",
-        component: () => import("layouts/FormLayout.vue"),
+        name: 'User-Form',
+        path: 'user-form',
+        component: () => import('layouts/FormLayout.vue'),
         props: true,
         children: [
           {
-            name: "User-Form-Edit",
-            path: ":id",
-            component: () => import("pages/Main/UserFormPage.vue"),
+            name: 'User-Form-Edit',
+            path: ':id',
+            component: () => import('pages/Main/UserFormPage.vue')
           },
           {
-            name: "User-Form-Create",
-            path: "",
-            component: () => import("pages/Main/UserFormPage.vue"),
-          },
-        ],
-      },
-    ],
-  },
+            name: 'User-Form-Create',
+            path: '',
+            component: () => import('pages/Main/UserFormPage.vue')
+          }
+        ]
+      }
+    ]
+  }
 
   // Always leave this as last one,
   // but you can also remove it
